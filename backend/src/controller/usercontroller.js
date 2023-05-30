@@ -1,11 +1,11 @@
 const UserModel = require("../model/db.model")
 
 const registerController = async (req, res) => {
-    const { name, email, password } = req.body
-    console.log(name, email, password)
+    const { name, email, phone } = req.body
+    console.log(name,  phone,email)
     let userobj = {
         name: name,
-        password: password,
+        phone: phone,
         email: email
         
     }
