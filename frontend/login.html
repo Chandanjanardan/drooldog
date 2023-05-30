@@ -9,19 +9,20 @@
 </head>
 <body>
     <div class="container">
-    <form>
+    <form action="../backend/src/index.js" method="post">
         <h2>Signin</h2>
         <label>Name</label>
-        <input class="name" type="text"/>
+        <input class="name" id="name" type="text"/>
         <label>Email</label>
-        <input class="email" type='email'/><br/>
+        <input class="email" id="email" type='email'/><br/>
         <label>Phone</label><br/>
-        <input class="phone"type='tel'/>
+        <input class="phone" id="phone" type='tel'/>
         <button >Signin</button>
         <p>Not registed :<Link to="/"><a>SinUp Here</a></Link></p>
         
         
     </form>
     </div>
+    <script src="./js/login.js"></script>
 </body>
 </html>
