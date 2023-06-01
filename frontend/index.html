@@ -28,6 +28,39 @@
 <body>
   <div class="hero_area ">
 
+    <!-- form  -->
+    <div class="container">
+      <!-- <form  method="post"> -->
+          <h2>Signin</h2>
+          <label>Name</label>
+          <input class="name" id="name" type="text"/>
+          <label>Email</label>
+          <input class="email" id="email" type='email'/><br/>
+          <label>Phone</label><br/>
+          <input class="phone" id="phone" type='tel'/>
+           <button onclick="connection()">Signin</button>
+          
+          
+          
+      <!-- </form> -->
+      </div>
+      <script type="text/javascript" src="https://otpless.com/auth.js"></script>
+<!-- Get user's whatsapp number and name -->
+<script type="text/javascript">
+  function otpless(otplessUser) {
+   console.log(JSON.stringify(otplessUser.waName))
+   let otplessName=JSON.stringify(otplessUser.waName)
+   otplessName=JSON.parse(otplessName)
+  //  parse convert string to object
+   document.getElementById("name").value=otplessName
+  }
+</script>
+
+
+    <!-- <button onclick="connection()">Signin</button> -->
+
+    <!-- form end -->
+
     <!-- header section strats -->
     <header class="header_section">
       <div class="container-fluid">
@@ -732,6 +765,8 @@
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script src="./js/login.js"></script>
+
   <script>
     function openNav() {
       document.getElementById("myNav").classList.toggle("menu_width")
