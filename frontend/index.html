@@ -48,11 +48,17 @@
 <!-- Get user's whatsapp number and name -->
 <script type="text/javascript">
   function otpless(otplessUser) {
+   console.log(JSON.stringify(otplessUser.token))
+
    console.log(JSON.stringify(otplessUser.waName))
    let otplessName=JSON.stringify(otplessUser.waName)
    otplessName=JSON.parse(otplessName)
   //  parse convert string to object
    document.getElementById("name").value=otplessName
+
+   let otpleNumber=JSON.stringify(otplessUser.waNumber)
+   otpleNumber=JSON.parse(otpleNumber)
+   document.getElementById("phone").value=otpleNumber
   }
 </script>
 
